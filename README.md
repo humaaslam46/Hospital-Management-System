@@ -110,7 +110,7 @@ This project is intended for educational and portfolio purposes.
 
 ## 👤 Author
 
-**Your Name**
-GitHub: https://github.com/your-username
-
+**Huma Aslam**
+[GitHub: https://github.com/your-username
+](https://github.com/humaaslam46)
 ---
