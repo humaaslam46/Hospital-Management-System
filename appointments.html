@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare | My Appointments</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkAuth()">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html"><i class="bi bi-hospital-fill me-2"></i>MEDICARE</a>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto gap-lg-4">
+                    <li><a href="index.html" class="nav-link fw-semibold">Home</a></li>
+                    <li><a href="appointments.html" class="nav-link active fw-semibold text-primary">Appointments</a></li>
+                    <li><a href="departments.html" class="nav-link fw-semibold">Departments</a></li>
+                    <li><a href="doctors.html" class="nav-link fw-semibold">Doctors</a></li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-outline-secondary rounded-circle" id="themeToggle"><i id="themeIcon" class="bi bi-moon-stars"></i></button>
+                <button class="btn btn-danger btn-sm px-4 rounded-pill" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold"><i class="bi bi-calendar-check me-2"></i>Appointment Schedule</h2>
+            <button class="btn btn-primary" onclick="window.location.href='index.html#book'">+ Book New</button>
+        </div>
+        
+        <div class="card border-0 shadow-sm overflow-hidden">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th><th>Doctor Name</th><th>Specialization</th><th>Date & Time</th><th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="apptList">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 mt-5" id="footerPlaceholder"></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

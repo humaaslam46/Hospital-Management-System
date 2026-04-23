@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkAuth()">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-3" href="index.html"><i class="bi bi-hospital-fill me-2"></i>MEDICARE</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto gap-lg-4">
+                    <li class="nav-item"><a href="index.html" class="nav-link active fw-semibold">Home</a></li>
+                    <li class="nav-item"><a href="appointments.html" class="nav-link fw-semibold">Appointments</a></li>
+                    <li class="nav-item"><a href="departments.html" class="nav-link fw-semibold">Departments</a></li>
+                    <li class="nav-item"><a href="doctors.html" class="nav-link fw-semibold">Doctors</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-outline-secondary rounded-circle" id="themeToggle"><i id="themeIcon" class="bi bi-moon-stars"></i></button>
+                    <button class="btn btn-danger btn-sm px-4 rounded-pill" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-vh-100 d-flex align-items-center hero-section text-white bg-primary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-1 fw-bold mb-4">World-Class <br>Healthcare</h1>
+                    <p class="lead mb-5 opacity-75">Committed to providing professional medical care through advanced technology and compassionate specialists.</p>
+                    <button class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-pill shadow" data-bs-toggle="modal" data-bs-target="#apptModal">Book Now <i class="bi bi-arrow-right ms-2"></i></button>
+                </div>
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <i class="bi bi-heart-pulse-fill display-1 opacity-25" style="font-size: 20rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-100 bg-body-tertiary">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-6">
+                    <h2 class="display-4 fw-bold">25 Years of Excellence</h2>
+                    <p class="text-muted fs-5 mt-4">Founded in 1999, Medicare has grown from a local clinic into a global healthcare leader. We specialize in cardiology, neurology, and complex surgical procedures.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 24/7 Emergency Support</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 45+ Specialized Departments</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Online Appointment Booking</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-5 border-0 shadow-sm rounded-4 text-center">
+                        <h3 class="fw-bold mb-3">Our Mission</h3>
+                        <p class="text-muted">To deliver compassionate, high-quality healthcare to every patient through our integrated medical services and innovative practices.</p>
+                        <i class="bi bi-quote display-3 text-primary opacity-25"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row g-4 text-center">
+            <div class="col-md-3"><div class="p-4 rounded-4 shadow-sm border"><h3>120k+</h3><p class="text-muted">Happy Patients</p></div></div>
+            <div class="col-md-3"><div class="p-4 rounded-4 shadow-sm border"><h3>250+</h3><p class="text-muted">Modern Beds</p></div></div>
+            <div class="col-md-3"><div class="p-4 rounded-4 shadow-sm border"><h3>150+</h3><p class="text-muted">Specialists</p></div></div>
+            <div class="col-md-3"><div class="p-4 rounded-4 shadow-sm border"><h3>10+</h3><p class="text-muted">Awards Won</p></div></div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-5 mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold text-primary mb-4">MEDICARE</h4>
+                    <p class="opacity-75">Your trusted partner in healthcare. Providing top-tier medical facilities and expert consultation worldwide.</p>
+                    <div class="mt-4"><i class="bi bi-geo-alt me-2"></i> 123 Health Ave, New York, USA</div>
+                    <div><i class="bi bi-telephone me-2"></i> +1 (555) 000-1122</div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled opacity-75">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="departments.html" class="text-white text-decoration-none">Departments</a></li>
+                        <li class="mb-2"><a href="doctors.html" class="text-white text-decoration-none">Our Doctors</a></li>
+                        <li class="mb-2"><a href="appointments.html" class="text-white text-decoration-none">My Portal</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="mb-4">Patient Feedback</h5>
+                    <form id="footerFeedback" class="row g-2">
+                        <div class="col-6"><input type="text" class="form-control bg-light text-black border-secondary" placeholder="Your Name"></div>
+                        <div class="col-6"><input type="email" class="form-control bg-light text-black border-secondary" placeholder="Your Email"></div>
+                        <div class="col-12"><textarea class="form-control bg-light text-black border-secondary" placeholder="Your Message" rows="2"></textarea></div>
+                        <div class="col-12"><button class="btn btn-primary w-100">Send Feedback</button></div>
+                    </form>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <p class="text-center pb-4 mb-0 opacity-50 small">&copy; 2024 Medicare Hospital. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="apptModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0"><h5 class="fw-bold">Schedule Appointment</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body p-4">
+                    <form onsubmit="saveAppointment(event)">
+                        <div class="mb-3"><label class="form-label small fw-bold">Select Doctor</label><select id="apptDoc" class="form-select" required></select></div>
+                        <div class="mb-3"><label class="form-label small fw-bold">Department</label><input type="text" id="apptDept" class="form-control bg-light" readonly></div>
+                        <div class="row g-2">
+                            <div class="col-6"><label class="form-label small fw-bold">Date</label><input type="date" id="apptDate" class="form-control" required></div>
+                            <div class="col-6"><label class="form-label small fw-bold">Time</label><input type="time" id="apptTime" class="form-control" required></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-4 py-2">Confirm and Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

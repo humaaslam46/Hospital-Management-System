@@ -1,0 +1,88 @@
+:root{
+--bg:#f8fafc;
+--text:#1f2937;
+--card:#ffffff;
+--accent:#0d6efd;
+}
+
+[data-theme="dark"]{
+--bg:#020617;
+--text:#e5e7eb;
+--card:#0b1220;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+padding-top:70px;
+}
+
+.navbar{
+background:var(--card);
+}
+
+.nav-link, .navbar-brand{
+color:var(--text)!important;
+}
+
+.logo-circle{
+width:40px;height:40px;
+border-radius:50%;
+background:linear-gradient(135deg,#0d6efd,#00b894);
+display:flex;align-items:center;justify-content:center;
+color:white;
+}
+
+.hero-section{
+height:90vh;
+background:url('https://images.unsplash.com/photo-1579684385127-1ef15d508118') center/cover;
+position:relative;
+}
+
+.hero-section .overlay{
+position:absolute;inset:0;background:rgba(0,0,0,.6);
+}
+
+.hero-section .content{
+position:relative;z-index:2;padding:100px;
+}
+
+.about-card{
+background:var(--card);
+padding:30px;
+text-align:center;
+border-radius:16px;
+transition:.3s;
+}
+
+.about-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.about-card i{
+font-size:40px;
+color:var(--accent);
+margin-bottom:10px;
+}
+
+.dept-card,.doctor-card{
+cursor:pointer;
+transition:.3s;
+}
+
+.dept-card:hover,.doctor-card:hover{
+transform:scale(1.05);
+box-shadow:0 15px 30px rgba(0,0,0,.3);
+}
+
+.footer{
+background:#020617;
+color:white;
+padding:40px 0;
+}
+
+.footer a{
+color:#9ca3af;
+display:block;
+}

@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #0d6efd;
+}
+
+body {
+    transition: background 0.3s ease;
+}
+
+/* Section Styling */
+.py-100 {
+    padding: 100px 0;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Uniform Cards */
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    border: none !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Authentication Style */
+.auth-bg {
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+[data-bs-theme="dark"] .auth-bg {
+    background: #121212;
+}
+
+.auth-card {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Header & Sidebar replacement */
+.navbar {
+    backdrop-filter: blur(10px);
+    z-index: 1050;
+}
+
+/* Doctor Images */
+.doctor-img {
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Department Interactive Cards */
+.dept-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dept-card:hover {
+    background-color: var(--bs-primary);
+    transform: scale(1.05);
+}
+
+.dept-card:hover h5,
+.dept-card:hover p,
+.dept-card:hover i {
+    color: white !important;
+}
+
+/* Doctor Card Animation */
+.doctor-img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.doctor-card-item:hover .doctor-img {
+    transform: scale(1.1);
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 20px;
+}
+
+/* Table Responsive Styles */
+[data-bs-theme="dark"] .table {
+    color: #ccc;
+}
+
+/* 1. Fix the text the user types */
+input[type="text"], 
+input[type="email"], 
+textarea {
+  /* Use a dark color for light mode and white for dark mode */
+  color: #333; 
+}
+
+/* 2. Fix the "Name" placeholder text specifically */
+input::placeholder {
+  color: #666; /* Visible grey for light mode */
+  opacity: 1;  /* Firefox requires this to show full color */
+}
+
+/* 3. If you use a dark mode class (like .dark), override it there */
+.dark-mode input {
+  color: white;
+}
+.dark-mode input::placeholder {
+  color: #ccc;
+}
